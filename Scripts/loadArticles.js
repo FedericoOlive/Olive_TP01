@@ -6,13 +6,12 @@ function getBasePath()
 }
 
 const basePath = getBasePath();
+const allCatalogItems = new Map();
 
 document.addEventListener("DOMContentLoaded", () =>
 {
     const cart = document.getElementById("cartContent");
     const catalog = document.getElementById("catalogContent");
-
-    // Guardamos los IDs de los artículos en el carrito
     const cartItems = new Set();
 
     fetch(basePath + "Resources/Data/Articles/articlesIndex.json")
@@ -29,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () =>
                     .then(article =>
                     {
                         const langData = article[currentLang];
+                        allCatalogItems.set(article.id, article);
 
                         const articleItem = document.createElement("article");
                         articleItem.classList.add("catalogItem");
