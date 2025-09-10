@@ -9,26 +9,30 @@ const basePath = getBasePath();
 
 document.addEventListener("DOMContentLoaded", () =>
 {
+    const cart = document.getElementById("cartContent");
+    const catalog = document.getElementById("catalogContent");
+
+    // Guardamos los IDs de los artículos en el carrito
+    const cartItems = new Set();
+
     fetch(basePath + "Resources/Data/Articles/articlesIndex.json")
         .then(res => res.json())
         .then(folders =>
         {
-            const cart = document.getElementById("cartContent");
             cart.innerHTML = "";
-
-            const catalog = document.getElementById("catalogContent");
             catalog.innerHTML = "";
 
             folders.forEach(folder =>
             {
                 fetch(basePath + "Resources/Data/Articles/" + folder + "/data.json")
                     .then(res => res.json())
-                    .then(data =>
+                    .then(article =>
                     {
-                        const article = data;
                         const langData = article[currentLang];
+
                         const articleItem = document.createElement("article");
                         articleItem.classList.add("catalogItem");
+                        articleItem.dataset.id = article.id;
 
                         articleItem.innerHTML = `
                           <div class="imgItem" style="background-image: url('${basePath}Resources/Data/Articles/${folder}/img.webp');"></div>
@@ -41,6 +45,41 @@ document.addEventListener("DOMContentLoaded", () =>
                             <button class="confirmbutton">Confirmar</button>
                           </div>
                         `;
+
+                        const confirmButton = articleItem.querySelector(".confirmbutton");
+
+                        confirmButton.addEventListener("click", () =>
+                        {
+                            const id = article.id;
+
+                            if (!cartItems.has(id))
+                            {
+                                cartItems.add(id);
+
+                                confirmButton.textContent = "Quitar";
+                                articleItem.style.display = "none"; // NOTE: Oculta del Catálogo
+
+                                const cartArticle = articleItem.cloneNode(true);
+                                cartArticle.style.display = "block";
+
+                                const cartButton = cartArticle.querySelector(".confirmbutton");
+                                cartButton.textContent = "Quitar";
+
+                                cartButton.addEventListener("click", () =>
+                                {
+                                    cartItems.delete(id);
+                                    cartArticle.remove();
+                                    articleItem.style.display = "block"; // NOTE: Muestra en el Catálogo de nuevo
+                                    confirmButton.textContent = "Confirmar";
+                                });
+
+                                cart.appendChild(cartArticle);
+                            }
+                            else
+                            {
+                              console.log("ERROR: El artículo ya estaba en el carrito!");
+                            }
+                        });
 
                         catalog.appendChild(articleItem);
                     })
