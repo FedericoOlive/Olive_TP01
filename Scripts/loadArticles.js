@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () =>
 {
-    fetch("Resources/Data/Articles/articlesIndex.json")
+    fetch("./Resources/Data/Articles/articlesIndex.json")
         .then(res => res.json())
         .then(folders =>
         {
