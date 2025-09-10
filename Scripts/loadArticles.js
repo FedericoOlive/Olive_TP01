@@ -1,6 +1,16 @@
+function getBasePath()
+{
+    if (window.location.hostname === "federicoolive.github.io")
+        return "/TP01_Olive/";
+    return "/";
+}
+
+const basePath = getBasePath();
+console.log("Base Path:", basePath);
+
 document.addEventListener("DOMContentLoaded", () =>
 {
-    fetch("./Resources/Data/Articles/articlesIndex.json")
+    fetch(basePath + "Resources/Data/Articles/articlesIndex.json")
         .then(res => res.json())
         .then(folders =>
         {
@@ -12,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () =>
 
             folders.forEach(folder =>
             {
-                fetch("./Resources/Data/Articles/" + folder + "/data.json")
+                fetch(basePath + "Resources/Data/Articles/" + folder + "/data.json")
                     .then(res => res.json())
                     .then(data =>
                     {
@@ -22,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () =>
                         articleItem.classList.add("catalogItem");
 
                         articleItem.innerHTML = `
-                          <div class="imgItem" style="background-image: url('./Resources/Data/Articles/${folder}/${article.img}');"></div>
+                          <div class="imgItem" style="background-image: url('${basePath}Resources/Data/Articles/${folder}/img.webp');"></div>
                           <div class="contentItem">
                             <h2><strong>${langData.title}</strong></h2>
                             <p>${langData.content}</p>
