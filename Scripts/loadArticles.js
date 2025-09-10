@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () =>
                             <div class="infoItem">
                               <span class="duration"><i class="far fa-clock"></i> ${langData.duration}</span>
                             </div>
-                            <button class="confirmbutton">Confirmar</button>
+                            <button class="confirmbutton">${allLang[currentLang].addCartButton}</button>
                           </div>
                         `;
 
@@ -56,21 +56,21 @@ document.addEventListener("DOMContentLoaded", () =>
                             {
                                 cartItems.add(id);
 
-                                confirmButton.textContent = "Quitar";
+                                confirmButton.textContent = allLang[currentLang].removeCartButton;
                                 articleItem.style.display = "none"; // NOTE: Oculta del Catálogo
 
                                 const cartArticle = articleItem.cloneNode(true);
                                 cartArticle.style.display = "block";
 
                                 const cartButton = cartArticle.querySelector(".confirmbutton");
-                                cartButton.textContent = "Quitar";
+                                cartButton.textContent = allLang[currentLang].removeCartButton;
 
                                 cartButton.addEventListener("click", () =>
                                 {
                                     cartItems.delete(id);
                                     cartArticle.remove();
                                     articleItem.style.display = "block"; // NOTE: Muestra en el Catálogo de nuevo
-                                    confirmButton.textContent = "Confirmar";
+                                    confirmButton.textContent = allLang[currentLang].addCartButton;
                                 });
 
                                 cart.appendChild(cartArticle);

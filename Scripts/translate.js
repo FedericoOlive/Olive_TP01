@@ -27,7 +27,10 @@ const allLang = {
         formMessagePlaceholder: "Escribe tu mensaje",
 
         cartTitle: "Carrito:",
-        sendForm: "Enviar.",
+        sendForm: "Enviar",
+
+        addCartButton: "Agregar",
+        removeCartButton: "Quitar",
 
         footer: "Hecho por: Federico Olive - 2025 - 05 - 09"
     },
@@ -61,6 +64,9 @@ const allLang = {
         cartTitle: "Cart:",
         sendForm: "Send",
 
+        addCartButton: "Add",
+        removeCartButton: "Remove",
+
         footer: "Made by: Federico Olive - 2025 - 05 - 09"
     },
     fr:
@@ -92,6 +98,9 @@ const allLang = {
 
         cartTitle: "Panier :",
         sendForm: "Envoyer",
+
+        addCartButton: "Ajouter",
+        removeCartButton: "Supprimer",
 
         footer: "Fait par : Federico Olive - 2025 - 05 - 09"
     },
@@ -125,6 +134,9 @@ const allLang = {
         cartTitle: "Carrello:",
         sendForm: "Invia",
 
+        addCartButton: "Aggiungi",
+        removeCartButton: "Rimuovi",
+
         footer: "Realizzato da: Federico Olive - 2025 - 05 - 09"
     },
     pt:
@@ -157,6 +169,9 @@ const allLang = {
         cartTitle: "Carrinho:",
         sendForm: "Enviar",
 
+        addCartButton: "Adicionar",
+        removeCartButton: "Remover",
+
         footer: "Feito por: Federico Olive - 2025 - 05 - 09"
     }
 };
@@ -181,6 +196,7 @@ document.addEventListener("DOMContentLoaded", () =>
 
 function changeLanguage(lang)
 {
+    currentLang = lang;
     document.documentElement.lang = lang;
 
     document.getElementById('mainTitle').textContent = allLang[lang].mainTitle;
@@ -208,6 +224,20 @@ function changeLanguage(lang)
     document.getElementById('sendForm').textContent = allLang[lang].sendForm;
 
     document.getElementById('footer').textContent = allLang[lang].footer;
+
+
+    const allConfirmbuttons = document.getElementById('catalogContent').querySelectorAll('.confirmbutton');
+
+    allConfirmbuttons.forEach(button =>
+    {
+        button.textContent = allLang[lang].addCartButton;
+    });
+
+    const allRemovebuttons = document.getElementById('cartContent').querySelectorAll('.confirmbutton');
+    allRemovebuttons.forEach(button =>
+    {
+        button.textContent = allLang[lang].removeCartButton;
+    });
 
     const catalogItems = document.querySelectorAll('.catalogItem');
     catalogItems.forEach(catalogItem =>
