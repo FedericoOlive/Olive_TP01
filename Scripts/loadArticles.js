@@ -81,10 +81,31 @@ document.addEventListener("DOMContentLoaded", () =>
                             }
                         });
 
-                        catalog.appendChild(articleItem);
+                        insertSorted(catalog, articleItem);
                     })
                     .catch(err => console.error("Error cargando artículo:", err));
             });
         })
         .catch(err => console.error("Error listando carpetas:", err));
 });
+
+function insertSorted(cart, newArticle)
+{
+    const newId = parseInt(newArticle.dataset.id, 10);
+    let inserted = false;
+
+    for (const child of cart.children)
+    {
+        const childId = parseInt(child.dataset.id, 10);
+
+        if (newId < childId)
+        {
+            cart.insertBefore(newArticle, child);
+            inserted = true;
+            break;
+        }
+    }
+
+    if (!inserted)
+        cart.appendChild(newArticle);
+}
