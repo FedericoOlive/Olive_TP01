@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () =>
                         articleItem.classList.add("catalogItem");
 
                         articleItem.innerHTML = `
-                          <div class="imgItem" style="background-image: url('/Resources/Data/Articles/${folder}/${article.img}');"></div>
+                          <div class="imgItem" style="background-image: url('./Resources/Data/Articles/${folder}/${article.img}');"></div>
                           <div class="contentItem">
                             <h2><strong>${langData.title}</strong></h2>
                             <p>${langData.content}</p>
