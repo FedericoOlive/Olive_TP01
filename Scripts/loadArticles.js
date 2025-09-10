@@ -6,7 +6,6 @@ function getBasePath()
 }
 
 const basePath = getBasePath();
-console.log("Base Path:", basePath);
 
 document.addEventListener("DOMContentLoaded", () =>
 {
