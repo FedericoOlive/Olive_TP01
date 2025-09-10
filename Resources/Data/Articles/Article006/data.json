@@ -1,0 +1,35 @@
+{
+    "id": 6,
+    "img": "img.webp",
+
+    "es":
+    {
+        "title": "Mi Artículo 6",
+        "content": "Contenido del artículo 6...",
+        "duration": "6 meses."
+    },
+    "en":
+    {
+        "title": "My Article 6",
+        "content": "Content of article 6...",
+        "duration": "6 months."
+    },
+    "fr":
+    {
+        "title": "Mon Article 6",
+        "content": "Contenu de l'article 6...",
+        "duration": "6 mois."
+    },
+    "it":
+    {
+        "title": "Il Mio Articolo 6",
+        "content": "Contenuto dell'articolo 6...",
+        "duration": "6 mesi."
+    },
+    "pt":
+    {
+        "title": "Meu Artigo 6",
+        "content": "Conteúdo do artigo 6...",
+        "duration": "6 meses."
+    }
+}

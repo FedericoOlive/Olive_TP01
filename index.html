@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="Resources/Icons/favicon.png">
+</head>
+
+<body>
+    <section class="languageSection">
+        <div>
+            <button data-lang="es"> <img class="languageIcon" src="Resources/Icons/Languages/es.png" alt="Español"> </button>
+            <button data-lang="en"> <img class="languageIcon" src="Resources/Icons/Languages/en.png" alt="Inglés"> </button>
+            <button data-lang="fr"> <img class="languageIcon" src="Resources/Icons/Languages/fr.png" alt="Francés"> </button>
+            <button data-lang="it"> <img class="languageIcon" src="Resources/Icons/Languages/it.png" alt="Italiano"> </button>
+            <button data-lang="pt"> <img class="languageIcon" src="Resources/Icons/Languages/pt.png" alt="Portugués"> </button>
+        </div>
+    </section>
+
+    <h1 class="title" id="mainTitle">Suscripción de Materias</h1>
+    <h2 class="subTitle" id="mainSubTitle">Elija las materias que desee aprender</h2>
+
+    <ol>
+        <h3 id="howToStep00">Pasos a Seguir:</h3>
+        <li id="howToStep01">Elegir una o varias materias.</li>
+        <li id="howToStep02">Ingresar tus datos</li>
+        <li id="howToStep99">Enviar</li>
+    </ol>
+
+    <div class="catalogArticleSlider">
+        <div class="sliderContent" id="catalogContent">
+            <!-- NOTE: Catálogos default (Se eliminan al cargar los nuevos) -->
+            <article class="catalogItem">
+                <h2>Prueba de Articulos</h2>
+                <p>Lenguaje de marcado para la web.</p>
+                <button class="confirmbutton">Agregar</button>
+            </article>
+            <article class="catalogItem">
+                <h2>Prueba de Articulos</h2>
+                <p>Lenguaje de marcado para la web.</p>
+                <button class="confirmbutton">Agregar</button>
+            </article>
+            <article class="catalogItem">
+                <h2>Prueba de Articulos</h2>
+                <p>Lenguaje de marcado para la web.</p>
+                <button class="confirmbutton">Agregar</button>
+            </article>
+            <article class="catalogItem">
+                <h2>Prueba de Articulos</h2>
+                <p>Lenguaje de marcado para la web.</p>
+                <button class="confirmbutton">Agregar</button>
+            </article>
+            <article class="catalogItem">
+                <h2>Prueba de Articulos</h2>
+                <p>Lenguaje de marcado para la web.</p>
+                <button class="confirmbutton">Agregar</button>
+            </article>
+            <!-- NOTE: Se insertan dinámicamente los artículos -->
+        </div>
+    </div>
+
+    <div class="formAndCartContainer">
+        <section class="formSubcription">
+            <h2 id="formSubcriptionTitle">Materias Disponibles</h2>
+            <ul>
+                <li>
+                    <label for="nombre" id="formLabelName">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+                </li>
+                <li>
+                    <label for="email" id="formLabelEmail">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Escribe tu email">
+                </li>
+                <li>
+                    <label for="telefono" id="formLabelPhone">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu teléfono">
+                </li>
+                <li>
+                    <label for="edad" id="formLabelAge">Edad:</label>
+                    <input type="number" id="edad" name="edad" placeholder="Escribe tu edad">
+                </li>
+                <li>
+                    <label for="mensaje" id="formLabelMessage">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje"></textarea>
+                </li>
+            </ul>
+
+            <!-- FIX: Arreglar este botón queda afuera de la vista por el footer ¬¬ -->
+            <button id="sendForm">Enviar</button>
+        </section>
+
+        <div class="subjectCart">
+            <h2 id="cartTitle">Carrito:</h2>
+            <div class="subjectCartContent" id="cartContent">
+                <!-- NOTE: Carrito default (Se eliminan al cargar los nuevos) -->
+                <article class="catalogItem2">
+                    <h2>Prueba de Articulos</h2>
+                    <p>Lenguaje de marcado para la web.</p>
+                    <button class="confirmButton">Eliminar</button>
+                </article>
+                <article class="catalogItem2">
+                    <h2>Prueba de Articulos</h2>
+                    <p>Lenguaje de marcado para la web.</p>
+                    <button class="confirmButton">Eliminar</button>
+                </article>
+                <article class="catalogItem2">
+                    <h2>Prueba de Articulos</h2>
+                    <p>Lenguaje de marcado para la web.</p>
+                    <button class="confirmButton">Eliminar</button>
+                </article>
+                <article class="catalogItem2">
+                    <h2>Prueba de Articulos</h2>
+                    <p>Lenguaje de marcado para la web.</p>
+                    <button class="confirmButton">Eliminar</button>
+                </article>
+                <article class="catalogItem2">
+                    <h2>Prueba de Articulos</h2>
+                    <p>Lenguaje de marcado para la web.</p>
+                    <button class="confirmButton">Eliminar</button>
+                </article>
+                <!-- NOTE: Se insertan dinámicamente los artículos -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="webFooter" id="footer">Federico Olive - 2025 - 05 - 09</footer>
+
+    <!-- QUESTION: Como evitar las dependencias???? -->
+    <script src="./Scripts/sliders.js"></script>
+    <script src="./Scripts/translate.js"></script>
+    <script src="./Scripts/loadArticles.js"></script>
+    <script src="./Scripts/main.js"></script>
+</body>
+
+</html>
+
+
+<!-- QUESTION no lo puedo correr con F5 porque me dice el siguiente error:
+
+Access to fetch at 'file:///E:/Cursadas/UTN/React/Entregas/TP01_MyFirstWebPage/Resources/Data/articulos.json' 
+from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol 
+schemes: chrome, chrome-extension, chrome-untrusted, data, http, https, isolated-app. 
+
+El archivo si está ahi pero me tira error de CORS.
+No encontré manera de solicionarlo sin correlo en un servidor local. (Live-Server)
+Con Live-Server funciona perfectamente.
+
+¿Alguna idea de como solucionarlo?
+
+-->

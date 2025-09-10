@@ -1,0 +1,35 @@
+{
+    "id": 5,
+    "img": "img.webp",
+
+    "es":
+    {
+        "title": "Mi Artículo 5",
+        "content": "Contenido del artículo 5...",
+        "duration": "6 meses."
+    },
+    "en":
+    {
+        "title": "My Article 5",
+        "content": "Content of article 5...",
+        "duration": "6 months."
+    },
+    "fr":
+    {
+        "title": "Mon Article 5",
+        "content": "Contenu de l'article 5...",
+        "duration": "6 mois."
+    },
+    "it":
+    {
+        "title": "Il Mio Articolo 5",
+        "content": "Contenuto dell'articolo 5...",
+        "duration": "6 mesi."
+    },
+    "pt":
+    {
+        "title": "Meu Artigo 5",
+        "content": "Conteúdo do artigo 5...",
+        "duration": "6 meses."
+    }
+}

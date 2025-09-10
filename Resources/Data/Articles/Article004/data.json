@@ -1,0 +1,35 @@
+{
+    "id": 4,
+    "img": "img.webp",
+
+    "es":
+    {
+        "title": "Mi Artículo 4",
+        "content": "Contenido del artículo 4...",
+        "duration": "6 meses."
+    },
+    "en":
+    {
+        "title": "My Article 4",
+        "content": "Content of article 4...",
+        "duration": "6 months."
+    },
+    "fr":
+    {
+        "title": "Mon Article 4",
+        "content": "Contenu de l'article 4...",
+        "duration": "6 mois."
+    },
+    "it":
+    {
+        "title": "Il Mio Articolo 4",
+        "content": "Contenuto dell'articolo 4...",
+        "duration": "6 mesi."
+    },
+    "pt":
+    {
+        "title": "Meu Artigo 4",
+        "content": "Conteúdo do artigo 4...",
+        "duration": "6 meses."
+    }
+}
