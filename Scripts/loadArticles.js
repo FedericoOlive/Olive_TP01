@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () =>
 
             folders.forEach(folder =>
             {
-                fetch(`/Resources/Data/Articles/${folder}/data.json`)
+                fetch("./Resources/Data/Articles/" + folder + "/data.json")
                     .then(res => res.json())
                     .then(data =>
                     {
