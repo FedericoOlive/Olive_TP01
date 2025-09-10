@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () =>
                             }
                             else
                             {
-                              console.log("ERROR: El artículo ya estaba en el carrito!");
+                                console.log("ERROR: El artículo ya estaba en el carrito!");
                             }
                         });
 

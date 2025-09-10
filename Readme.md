@@ -1,7 +1,7 @@
 # TP01 - Federico Olive
 
-![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-blue?style=flat-square)
-![GitHub](https://img.shields.io/badge/Repositorio-GitHub-lightgrey?style=flat-square)
+[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-blue?style=flat-square)](https://federicoolive.github.io/TP01_Olive/)
+[![GitHub](https://img.shields.io/badge/Repositorio-GitHub-lightgrey?style=flat-square)](https://github.com/FedericoOlive/TP01_Olive)
 
 ---
 
@@ -14,7 +14,7 @@
 
 ## 📄 Descripción
 
-Este proyecto es el **TP01 de Federico Olive**, desarrollado como parte de la cursada de programación/web.  
+Este proyecto es el **TP01 de Federico Olive**, desarrollado como parte de la cursada de **Curso de Desarrollo en React JS** del docente **Matías Gimenez**.  
 Contiene una página web funcional con HTML, CSS y JavaScript, lista para ser desplegada y visualizada online mediante GitHub Pages.
 
 ---
