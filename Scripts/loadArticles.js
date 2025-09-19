@@ -1,7 +1,7 @@
 function getBasePath()
 {
     if (window.location.hostname === "federicoolive.github.io")
-        return "/TP01_Olive/";
+        return "/Olive_TP01/";
     return "/";
 }
 

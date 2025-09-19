@@ -1,14 +1,14 @@
 # TP01 - Federico Olive
 
-[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-blue?style=flat-square)](https://federicoolive.github.io/TP01_Olive/)
-[![GitHub](https://img.shields.io/badge/Repositorio-GitHub-lightgrey?style=flat-square)](https://github.com/FedericoOlive/TP01_Olive)
+[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-blue?style=flat-square)](https://federicoolive.github.io/Olive_TP01/)
+[![GitHub](https://img.shields.io/badge/Repositorio-GitHub-lightgrey?style=flat-square)](https://github.com/FedericoOlive/Olive_TP01)
 
 ---
 
 ## 🔗 Enlaces
 
-- **Deploy en vivo:** [https://federicoolive.github.io/TP01_Olive/](https://federicoolive.github.io/TP01_Olive/)  
-- **Repositorio GitHub:** [https://github.com/FedericoOlive/TP01_Olive](https://github.com/FedericoOlive/TP01_Olive)
+- **Deploy en vivo:** [https://federicoolive.github.io/Olive_TP01/](https://federicoolive.github.io/Olive_TP01/)  
+- **Repositorio GitHub:** [https://github.com/FedericoOlive/Olive_TP01](https://github.com/FedericoOlive/Olive_TP01)
 
 ---
 
@@ -41,8 +41,8 @@ La página incluye varias características destacadas:
 
 ## 🚀 Cómo usar
 
-1. Abrir el [deploy en vivo](https://federicoolive.github.io/TP01_Olive/) en un navegador.  
+1. Abrir el [deploy en vivo](https://federicoolive.github.io/Olive_TP01/) en un navegador.  
 2. Para clonar y trabajar localmente:
 
 ```bash
-git clone https://github.com/FedericoOlive/TP01_Olive.git
+git clone https://github.com/FedericoOlive/Olive_TP01.git
